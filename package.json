@@ -1,0 +1,16 @@
+{
+  "name": "ippay",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:namiyama-814/ippay.git",
+  "author": "namiyama",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=\"development\" node --watch src/server.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.0.0",
+    "hono": "^4.12.15",
+    "pug": "^3.0.4"
+  }
+}

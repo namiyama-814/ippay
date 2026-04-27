@@ -36,7 +36,7 @@
 
 ### Web API の URL 一覧
 #### 利用者用API
-| パス | メソッド | 処理内容 |送るデータ|
+| パス | メソッド | 処理内容 | 送るデータ |
 | ---- || ---- || ---- || ---- |
 | /api/payments | POST | 決済を行う | { merchant_id, amount } |
 | /api/charges | POST | チャージを行う | { amount } |
@@ -46,3 +46,22 @@
 | ---- || ---- || ---- || ---- |
 | /api/merchant/qr | POST | QRコードを生成する | { amount } |
 | /api/payments/:id/refund | POST | 返金する | { reason } |
+
+## モジュール設計
+フレームワークにはHonoを利用する
+### ディレクトリ構造
+src/
+├── routes/          # ルーティング（入り口）
+├── controllers/     # ビジネスロジック（計算・判断）
+├── models/          # データベース操作（データの形）
+├── middlewares/     # 認証・エラーチェック
+└── app.js           # アプリ全体の起動設定
+### 各ファイルの責務
+| ファイル名 | 責務 |
+| ---- || ---- |
+| routes/auth.js | OAuthの処理など |
+| routes/payments.js | ユーザー向けの処理 |
+| routes/merchant.js | 加盟店向けの処理 |
+| controllers/authController.js | セッション情報のDB保存など |
+| controllers/payController.js | 残高計算、決済記録・チャージのDB保存 |
+| controllers/merchantController.js | 売り上げ計算、返金処理 |

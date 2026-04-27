@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPPAY | The Silent Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;900&family=Noto+Sans+JP:wght@300;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/home.css">
+</head>
+
+<nav id="main-nav"
+    class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-[100] transition-all duration-700 ease-in-out">
+    <div id="nav-content"
+        class="glass-effect rounded-2xl md:rounded-full px-6 py-3 flex justify-between items-center border border-white/20 shadow-2xl transition-all duration-500">
+
+        <div class="flex items-center gap-3 group cursor-pointer">
+            <div
+                class="relative w-10 h-10 bg-gradient-to-tr from-blue-600 to-cyan-400 rounded-xl flex items-center justify-center rotate-3 group-hover:rotate-0 transition-all duration-500 shadow-lg shadow-blue-500/30">
+                <span class="text-white font-black text-sm italic tracking-widest">IP</span>
+                <div
+                    class="absolute inset-0 bg-white/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+            <span id="nav-logo" class="text-2xl font-black tracking-tight text-white transition-colors duration-500">
+                IP<span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">PAY</span>
+            </span>
+        </div>
+
+        <div class="hidden md:flex items-center gap-10">
+            <a href="#about"
+                class="nav-item group relative py-2 text-[11px] font-bold tracking-[0.25em] text-white/70 hover:text-white transition-colors uppercase">
+                About
+                <span
+                    class="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#user"
+                class="nav-item group relative py-2 text-[11px] font-bold tracking-[0.25em] text-white/70 hover:text-white transition-colors uppercase">
+                Benefits
+                <span
+                    class="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#merit"
+                class="nav-item group relative py-2 text-[11px] font-bold tracking-[0.25em] text-white/70 hover:text-white transition-colors uppercase">
+                Business
+                <span
+                    class="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+        </div>
+
+        <div class="flex items-center gap-5">
+            <a href="#" id="nav-login"
+                class="hidden sm:block text-[11px] font-bold tracking-[0.2em] text-white/50 hover:text-white transition-colors uppercase">Login</a>
+            <button id="nav-cta"
+                class="relative overflow-hidden bg-white text-slate-900 px-7 py-2.5 rounded-full text-[11px] font-black tracking-[0.1em] uppercase hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                <span class="relative z-10">Get Started</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0f1d]">
+    <div class="absolute inset-0 z-0">
+        <div
+            class="absolute top-[-10%] left-[-10%] w-[70%] h-[70%] bg-blue-600/30 blur-[120px] rounded-full animate-pulse">
+        </div>
+        <div
+            class="absolute bottom-[10%] right-[-5%] w-[50%] h-[50%] bg-cyan-500/20 blur-[100px] rounded-full animate-bounce-slow">
+        </div>
+
+        <div class="absolute inset-0 opacity-20"
+            style="background-image: linear-gradient(#ffffff0a 1px, transparent 1px), linear-gradient(90deg, #ffffff0a 1px, transparent 1px); background-size: 50px 50px;">
+        </div>
+
+        <div class="absolute inset-0 opacity-40"
+            style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0); background-size: 32px 32px;">
+        </div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col items-center text-center">
+
+            <div class="mb-10 opacity-0 animate-fade-in-up">
+                <span
+                    class="inline-flex items-center gap-2 px-5 py-2 bg-white/5 backdrop-blur-xl text-blue-300 text-[11px] font-bold tracking-[0.3em] uppercase rounded-full border border-white/10 shadow-[0_0_20px_rgba(59,130,246,0.1)]">
+                    <span class="w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></span>
+                    The Smart Bridge of Payment
+                </span>
+            </div>
+
+            <h1 class="mb-10 leading-[1] tracking-tighter text-white">
+                <span
+                    class="block text-2xl md:text-4xl font-medium text-blue-100/60 mb-4 opacity-0 animate-fade-in-up-delay-1 italic">
+                    決済を、もっと軽やかに。
+                </span>
+                <span
+                    class="block text-7xl md:text-[10rem] font-black italic opacity-0 animate-fade-in-up-delay-2 leading-none bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/20">
+                    IP<span class="text-blue-500 drop-shadow-[0_0_30px_rgba(59,130,246,0.5)]">PAY</span>
+                </span>
+            </h1>
+
+            <div class="max-w-2xl mb-16 opacity-0 animate-fade-in-up-delay-3">
+                <p class="text-base md:text-lg text-slate-400 font-medium leading-relaxed tracking-widest">
+                    店側のQRを、あなたが読み取る。たったそれだけ。<br class="hidden md:block">
+                    あなたの日常を彩る、最も<span class="text-white">スマート</span>で<span class="text-white">明るい</span>パートナーへ。
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-8 opacity-0 animate-fade-in-up-delay-4">
+                <button
+                    class="group relative px-12 py-5 bg-blue-600 rounded-full font-black text-[11px] tracking-[0.2em] text-white overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(37,99,235,0.3)]">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <span class="relative z-10 uppercase">Download Now</span>
+                </button>
+
+                <a href="#" class="group flex items-center gap-4 py-2">
+                    <span
+                        class="text-[11px] font-bold tracking-[0.2em] text-white/40 group-hover:text-white transition-colors uppercase">View
+                        Merchant Service</span>
+                    <div
+                        class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center transition-all duration-500 group-hover:border-blue-500 group-hover:bg-blue-500/10">
+                        <svg class="w-4 h-4 text-white/40 group-hover:text-blue-400 transform group-hover:translateX-1 transition-all"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-[#0a0f1d] to-transparent z-20"></div>
+</section>
+
+<section id="about" class="relative py-32 md:py-48 bg-[#FDFDFD] overflow-hidden">
+    <div class="absolute inset-0 opacity-40"
+        style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23cbd5e1&quot; fill-opacity=&quot;0.15&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2v-4h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2v-4h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+    </div>
+
+    <div class="container mx-auto px-6 max-w-6xl relative z-10">
+
+        <div class="text-center mb-28 md:mb-36 group">
+            <div class="inline-flex items-center gap-3 mb-6">
+                <span
+                    class="w-8 h-px bg-gradient-to-r from-transparent to-blue-600 transition-all duration-700 group-hover:w-16"></span>
+                <h2 class="text-blue-600 text-[11px] font-bold tracking-[0.4em] uppercase">Service Identity</h2>
+                <span
+                    class="w-8 h-px bg-gradient-to-l from-transparent to-blue-600 transition-all duration-700 group-hover:w-16"></span>
+            </div>
+            <p
+                class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight max-w-3xl mx-auto">
+                あなたの「支払う」に、<br class="md:hidden">もっと自由と誠実さを。
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-16 md:gap-24 items-center">
+
+            <div class="lg:col-span-7 order-2 lg:order-1 space-y-16">
+
+                <div
+                    class="relative flex gap-10 items-start p-8 rounded-3xl transition-all duration-500 hover:bg-slate-50 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.03)] group">
+                    <div class="flex-shrink-0 relative w-12 h-12 mt-1">
+                        <div
+                            class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-20 bg-gradient-to-b from-blue-600 to-transparent">
+                        </div>
+                        <div
+                            class="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-blue-600 rounded-full group-hover:scale-150 transition-transform">
+                        </div>
+                    </div>
+
+                    <div class="flex-1">
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-slate-950 mb-5 tracking-tight flex items-center gap-3">
+                            <span class="text-blue-200 font-mono text-3xl">01</span>
+                            スマートなユーザースキャン方式
+                        </h3>
+                        <p class="text-slate-600 leading-relaxed text-base md:text-lg">
+                            お店が提示するQRコードを、あなたのスマートフォンで読み取るだけ。余計なデバイスの介在をなくし、最もシンプルでミスのない決済プロセスを実現しました。
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="relative flex gap-10 items-start p-8 rounded-3xl transition-all duration-500 hover:bg-slate-50 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.03)] group">
+                    <div class="flex-shrink-0 relative w-12 h-12 mt-1">
+                        <div
+                            class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-20 bg-gradient-to-b from-blue-600 to-transparent">
+                        </div>
+                        <div
+                            class="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-blue-600 rounded-full group-hover:scale-150 transition-transform">
+                        </div>
+                    </div>
+
+                    <div class="flex-1">
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-slate-950 mb-5 tracking-tight flex items-center gap-3">
+                            <span class="text-blue-200 font-mono text-3xl">02</span>
+                            専属の「通訳」のようなサポート力
+                        </h3>
+                        <p class="text-slate-600 leading-relaxed text-base md:text-lg">
+                            決済の裏側では、高度なセキュリティアルゴリズムがあなたの資産を常に監視。言葉を介さずとも、あなたとお店の信頼を完璧に繋ぎ合わせます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 order-1 lg:order-2 perspective-1000">
+                <div
+                    class="relative p-12 bg-white rounded-[2rem] border border-slate-100 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.06)] transform transition-all duration-700 hover:rotate-y-[-5deg] hover:rotate-x-[5deg] hover:shadow-[0_70px_120px_-20px_rgba(0,0,0,0.1)] group">
+
+                    <div class="aspect-square flex flex-col justify-center items-center text-center relative z-10">
+                        <div class="relative mb-12 w-28 h-28 flex items-center justify-center">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-full opacity-10 group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div
+                                class="absolute inset-2 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity">
+                            </div>
+                            <i class="fas fa-shield-halved text-blue-600 text-4xl relative z-10"></i>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="text-slate-900 font-extrabold text-2xl tracking-tighter">Reliable Transaction
+                            </div>
+                            <p
+                                class="text-slate-400 text-[11px] tracking-[0.25em] leading-loose font-medium uppercase hover:text-blue-600 transition-colors cursor-default">
+                                ENCRYPTED / SECURE / RAPID<br>
+                                © 2026 IPPAY SYSTEM
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute top-8 left-8 w-10 h-10 border-t-2 border-l-2 border-slate-200 rounded-tl-xl transition-all group-hover:border-blue-300 group-hover:-translate-x-2 group-hover:-translate-y-2">
+                    </div>
+                    <div
+                        class="absolute bottom-8 right-8 w-10 h-10 border-b-2 border-r-2 border-slate-200 rounded-br-xl transition-all group-hover:border-blue-300 group-hover:translate-x-2 group-hover:translate-y-2">
+                    </div>
+
+                    <div
+                        class="absolute -bottom-2 -right-2 w-full h-full bg-gradient-to-br from-blue-500 to-cyan-400 rounded-[2rem] z-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 group-hover:translate-y-2 transition-all duration-500 blur-sm">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="reasons" class="relative py-40 bg-white overflow-hidden">
+    <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20rem] font-black text-slate-50 select-none pointer-events-none z-0">
+        IPPAY
+    </div>
+
+    <div class="container mx-auto px-6 max-w-6xl relative z-10">
+
+        <div class="mb-32 text-center">
+            <div
+                class="inline-flex items-center gap-4 px-6 py-2 rounded-full bg-slate-50 border border-slate-100 mb-10 transition-transform hover:scale-105 duration-500">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
+                </span>
+                <span class="text-[11px] font-black tracking-[0.3em] text-slate-500 uppercase">Real-time Adoption</span>
+            </div>
+
+            <h2 class="font-bold text-slate-900 text-5xl md:text-7xl font-light leading-tight tracking-tighter">
+                登録ユーザー、ついに<br class="md:hidden">
+                <span class="relative inline-block font-black text-blue-600 mx-2">
+                    7人
+                    <span class="absolute -bottom-2 left-0 w-full h-1.5 bg-blue-100 -z-10"></span>
+                </span>
+                到達。
+            </h2>
+            <p class="mt-8 text-slate-400 text-xs md:text-sm tracking-[0.4em] uppercase font-bold">
+                We grow with every single early adopter.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-x-20 gap-y-24 md:gap-y-40">
+
+            <div class="relative group">
+                <span
+                    class="absolute -top-12 -left-6 text-[10rem] font-black text-slate-100 opacity-0 group-hover:opacity-40 transition-all duration-700 -z-10 translate-y-4 group-hover:translate-y-0 select-none">01</span>
+                <div
+                    class="relative pl-4 border-l-2 border-transparent group-hover:border-blue-600 transition-all duration-500">
+                    <h3 class="text-2xl font-black text-slate-900 mb-6 flex items-center gap-4">
+                        <span
+                            class="w-10 h-px bg-slate-200 group-hover:w-16 group-hover:bg-blue-600 transition-all duration-500"></span>
+                        全国のお店で使える
+                    </h3>
+                    <p class="text-slate-500 leading-relaxed text-base md:text-lg pl-14 font-medium">
+                        北は北海道から南は沖縄まで。あなたの「通訳者」として、IPPAYは全国の提携店でスムーズな決済を実現します。利用可能エリアは、現在も着実に拡大中です。
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative group md:mt-32">
+                <span
+                    class="absolute -top-12 -left-6 text-[10rem] font-black text-slate-100 opacity-0 group-hover:opacity-40 transition-all duration-700 -z-10 translate-y-4 group-hover:translate-y-0 select-none">02</span>
+                <div
+                    class="relative pl-4 border-l-2 border-transparent group-hover:border-blue-600 transition-all duration-500">
+                    <h3 class="text-2xl font-black text-slate-900 mb-6 flex items-center gap-4">
+                        <span
+                            class="w-10 h-px bg-slate-200 group-hover:w-16 group-hover:bg-blue-600 transition-all duration-500"></span>
+                        お買い物がおトクに
+                    </h3>
+                    <p class="text-slate-500 leading-relaxed text-base md:text-lg pl-14 font-medium">
+                        日常のあらゆる支払いを、価値あるものへ。独自のポイント還元システムにより、使うたびにあなたの次なる一歩をサポートするリワードが蓄積されます。
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <span
+                    class="absolute -top-12 -left-6 text-[10rem] font-black text-slate-100 opacity-0 group-hover:opacity-40 transition-all duration-700 -z-10 translate-y-4 group-hover:translate-y-0 select-none">03</span>
+                <div
+                    class="relative pl-4 border-l-2 border-transparent group-hover:border-blue-600 transition-all duration-500">
+                    <h3 class="text-2xl font-black text-slate-900 mb-6 flex items-center gap-4">
+                        <span
+                            class="w-10 h-px bg-slate-200 group-hover:w-16 group-hover:bg-blue-600 transition-all duration-500"></span>
+                        安全・安心に使える
+                    </h3>
+                    <p class="text-slate-500 leading-relaxed text-base md:text-lg pl-14 font-medium">
+                        最新の暗号化技術と生体認証を組み合わせ、あなた以外が触れることのできない堅牢な決済環境を構築。私たちは、あなたの信頼を第一に考えます。
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative group md:mt-32">
+                <span
+                    class="absolute -top-12 -left-6 text-[10rem] font-black text-slate-100 opacity-0 group-hover:opacity-40 transition-all duration-700 -z-10 translate-y-4 group-hover:translate-y-0 select-none">04</span>
+                <div
+                    class="relative pl-4 border-l-2 border-transparent group-hover:border-blue-600 transition-all duration-500">
+                    <h3 class="text-2xl font-black text-slate-900 mb-6 flex items-center gap-4">
+                        <span
+                            class="w-10 h-px bg-slate-200 group-hover:w-16 group-hover:bg-blue-600 transition-all duration-500"></span>
+                        不正送金はありません
+                    </h3>
+                    <p class="text-slate-500 leading-relaxed text-base md:text-lg pl-14 font-medium">
+                        徹底した監視体制により、不審な取引を瞬時に検知。IPPAYのシステムにおいて、身に覚えのない送金が発生することはありません。あなたが預けた信頼は、私たちが守り抜きます。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="merchants" class="relative py-40 bg-[#F8FAFC]">
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style="background-image: radial-gradient(#2563eb 1px, transparent 1px); background-size: 30px 30px;">
+    </div>
+
+    <div class="container mx-auto px-6 max-w-6xl relative z-10">
+
+        <div class="flex flex-col md:flex-row justify-between items-end mb-28 gap-10">
+            <div class="max-w-xl group">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
+                    <h2 class="text-blue-600 text-[11px] font-bold tracking-[0.4em] uppercase">Partners</h2>
+                </div>
+                <p class="text-4xl md:text-5xl font-black text-slate-900 leading-[1.1] tracking-tighter">
+                    顔の見える信頼を、<br>
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">決済のスタンダード</span>に。
+                </p>
+            </div>
+            <div class="text-left md:text-right pb-2">
+                <p class="text-slate-500 text-sm md:text-base leading-relaxed font-medium">
+                    現在、全国の厳選されたパートナー店舗様と<br class="hidden md:block">
+                    共に、新しい決済体験を広げています。
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+
+            <div
+                class="relative bg-white p-12 rounded-[3rem] border border-slate-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.02)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-700 group overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-[5rem] translate-x-10 -translate-y-10 group-hover:translate-x-6 group-hover:-translate-y-6 transition-transform duration-700 opacity-50">
+                </div>
+
+                <div class="relative z-10">
+                    <div
+                        class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-blue-600 group-hover:shadow-lg group-hover:shadow-blue-500/30 transition-all duration-500">
+                        <i class="fas fa-utensils text-blue-600 text-xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-5">Gourmet</h3>
+                    <p class="text-slate-500 text-base leading-relaxed mb-8 font-medium">
+                        こだわりの個人店から、地域の人気レストランまで。会話を邪魔しないスムーズな会計を。</p>
+                    <div
+                        class="inline-flex items-center gap-2 text-[10px] font-black text-blue-600 tracking-[0.2em] uppercase">
+                        <span class="w-1 h-1 bg-blue-600 rounded-full"></span>
+                        Coming Soon
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="relative bg-white p-12 rounded-[3rem] border border-slate-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.02)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-700 group overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-32 h-32 bg-cyan-50 rounded-bl-[5rem] translate-x-10 -translate-y-10 group-hover:translate-x-6 group-hover:-translate-y-6 transition-transform duration-700 opacity-50">
+                </div>
+
+                <div class="relative z-10">
+                    <div
+                        class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-blue-600 group-hover:shadow-lg group-hover:shadow-blue-500/30 transition-all duration-500">
+                        <i
+                            class="fas fa-bag-shopping text-blue-600 text-xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-5">Retail</h3>
+                    <p class="text-slate-500 text-base leading-relaxed mb-8 font-medium">
+                        ライフスタイルを彩るセレクトショップ。小規模店舗でも導入しやすいIPPAYならではの広がり。</p>
+                    <div
+                        class="inline-flex items-center gap-2 text-[10px] font-black text-blue-600 tracking-[0.2em] uppercase">
+                        <span class="w-1 h-1 bg-blue-600 rounded-full"></span>
+                        Expanding Network
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="relative bg-white p-12 rounded-[3rem] border border-slate-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.02)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-700 group overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-bl-[5rem] translate-x-10 -translate-y-10 group-hover:translate-x-6 group-hover:-translate-y-6 transition-transform duration-700 opacity-50">
+                </div>
+
+                <div class="relative z-10">
+                    <div
+                        class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-blue-600 group-hover:shadow-lg group-hover:shadow-blue-500/30 transition-all duration-500">
+                        <i class="fas fa-scissors text-blue-600 text-xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-5">Service</h3>
+                    <p class="text-slate-500 text-base leading-relaxed mb-8 font-medium">
+                        美容室やクリニック。身近なサービスをもっと身軽に。キャッシュレスの垣根をなくします。</p>
+                    <div
+                        class="inline-flex items-center gap-2 text-[10px] font-black text-blue-600 tracking-[0.2em] uppercase">
+                        <span class="w-1 h-1 bg-blue-600 rounded-full"></span>
+                        Join the Movement
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="relative group">
+            <div
+                class="absolute inset-0 bg-blue-600 rounded-[2.5rem] md:rounded-full blur-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+            </div>
+            <div
+                class="relative bg-white rounded-[2.5rem] md:rounded-full py-8 px-12 border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="hidden sm:flex w-10 h-10 rounded-full bg-slate-100 items-center justify-center text-slate-400">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <span class="text-slate-600 text-sm font-bold tracking-tight text-center md:text-left">
+                        IPPAYは、導入店舗様一軒一軒との対話を大切にしています。
+                    </span>
+                </div>
+                <a href="#"
+                    class="relative overflow-hidden bg-slate-900 text-white px-10 py-4 rounded-full text-[11px] font-black tracking-widest uppercase hover:bg-blue-600 transition-all duration-300 shadow-xl shadow-slate-200 group/btn">
+                    <span class="relative z-10 flex items-center gap-3">
+                        加盟店お申し込み
+                        <i
+                            class="fas fa-arrow-right text-[10px] group-hover/btn:translate-x-1 transition-transform"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="how-to-start" class="relative py-40 bg-white overflow-hidden">
+    <div class="absolute top-1/4 -right-20 w-96 h-96 bg-blue-50 blur-[120px] rounded-full opacity-60"></div>
+    <div class="absolute bottom-1/4 -left-20 w-72 h-72 bg-cyan-50 blur-[100px] rounded-full opacity-60"></div>
+
+    <div class="container mx-auto px-6 max-w-6xl relative z-10">
+
+        <div class="text-center mb-32">
+            <div class="inline-flex items-center justify-center mb-6">
+                <span
+                    class="text-blue-600 text-[11px] font-black tracking-[0.4em] uppercase py-2 px-4 bg-blue-50 rounded-lg">Quick
+                    Start</span>
+            </div>
+            <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-8 tracking-tighter">
+                最短1分。今すぐ始めよう。
+            </h2>
+            <p
+                class="text-slate-400 text-base md:text-lg tracking-widest font-medium max-w-2xl mx-auto leading-relaxed">
+                面倒な書類手続きは不要。スマートフォンひとつで、<br class="hidden md:block">
+                あなたの日常に「IPPAY」が溶け込みます。
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12 lg:gap-16 relative">
+
+            <div
+                class="hidden md:block absolute top-12 left-[15%] right-[15%] h-[2px] bg-gradient-to-r from-transparent via-slate-100 to-transparent -z-10">
+                <div
+                    class="w-20 h-full bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-scan-line">
+                </div>
+            </div>
+
+            <div class="group text-center transition-all duration-500">
+                <div class="relative inline-flex items-center justify-center mb-12">
+                    <div
+                        class="w-28 h-28 bg-white rounded-[2.5rem] border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex items-center justify-center group-hover:scale-110 group-hover:border-blue-500 transition-all duration-700 relative z-10 overflow-hidden">
+                        <i
+                            class="fas fa-download text-blue-600 text-3xl transition-transform group-hover:-translate-y-1"></i>
+                        <div
+                            class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-[0.03] transition-opacity">
+                        </div>
+                    </div>
+                    <div
+                        class="absolute -top-3 -right-3 w-12 h-12 bg-white text-slate-900 rounded-full flex items-center justify-center font-black italic text-sm shadow-xl border border-slate-50 z-20 transition-transform group-hover:rotate-12 group-hover:bg-blue-600 group-hover:text-white">
+                        01
+                    </div>
+                </div>
+                <h3
+                    class="text-2xl font-black text-slate-900 mb-5 tracking-tight group-hover:text-blue-600 transition-colors">
+                    アプリをダウンロード</h3>
+                <p class="text-slate-500 text-base leading-relaxed px-6 font-medium">
+                    App Store または Google Play から<br>「IPPAY」をインストール。
+                </p>
+            </div>
+
+            <div class="group text-center transition-all duration-500">
+                <div class="relative inline-flex items-center justify-center mb-12">
+                    <div
+                        class="w-28 h-28 bg-white rounded-[2.5rem] border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex items-center justify-center group-hover:scale-110 group-hover:border-blue-500 transition-all duration-700 relative z-10 overflow-hidden">
+                        <i
+                            class="fas fa-wallet text-blue-600 text-3xl transition-transform group-hover:-translate-y-1"></i>
+                        <div
+                            class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-[0.03] transition-opacity">
+                        </div>
+                    </div>
+                    <div
+                        class="absolute -top-3 -right-3 w-12 h-12 bg-white text-slate-900 rounded-full flex items-center justify-center font-black italic text-sm shadow-xl border border-slate-50 z-20 transition-transform group-hover:rotate-12 group-hover:bg-blue-600 group-hover:text-white">
+                        02
+                    </div>
+                </div>
+                <h3
+                    class="text-2xl font-black text-slate-900 mb-5 tracking-tight group-hover:text-blue-600 transition-colors">
+                    残高をチャージ</h3>
+                <p class="text-slate-500 text-base leading-relaxed px-6 font-medium">
+                    銀行口座やカードを連携して、<br>必要な分だけスマートにチャージ。
+                </p>
+            </div>
+
+            <div class="group text-center transition-all duration-500">
+                <div class="relative inline-flex items-center justify-center mb-12">
+                    <div
+                        class="w-28 h-28 bg-gradient-to-br from-blue-600 to-blue-700 rounded-[2.5rem] shadow-[0_20px_40px_rgba(37,99,235,0.3)] flex items-center justify-center group-hover:scale-110 transition-all duration-700 relative z-10">
+                        <i class="fas fa-qrcode text-white text-3xl animate-pulse"></i>
+                    </div>
+                    <div
+                        class="absolute -top-3 -right-3 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center font-black italic text-sm shadow-xl z-20 transition-transform group-hover:rotate-12">
+                        03
+                    </div>
+                </div>
+                <h3
+                    class="text-2xl font-black text-slate-900 mb-5 tracking-tight group-hover:text-blue-600 transition-colors">
+                    お店で支払う</h3>
+                <p class="text-slate-500 text-base leading-relaxed px-6 font-medium">
+                    店頭のQRコードをスキャン。<br>支払いは一瞬で完了します。
+                </p>
+            </div>
+
+        </div>
+
+        <div class="mt-32 flex flex-col sm:flex-row justify-center items-center gap-8">
+            <a href="#"
+                class="w-full sm:w-auto px-12 py-5 bg-slate-900 text-white rounded-2xl font-black text-[11px] tracking-[0.2em] hover:bg-blue-600 transition-all duration-500 shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-1 flex items-center justify-center gap-4 group">
+                <i class="fab fa-apple text-xl transition-transform group-hover:scale-110"></i>
+                APP STORE
+            </a>
+            <a href="#"
+                class="w-full sm:w-auto px-12 py-5 bg-slate-900 text-white rounded-2xl font-black text-[11px] tracking-[0.2em] hover:bg-blue-600 transition-all duration-500 shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-1 flex items-center justify-center gap-4 group">
+                <i class="fab fa-google-play text-xl transition-transform group-hover:scale-110"></i>
+                GOOGLE PLAY
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section id="faq" class="relative py-40 bg-[#FDFDFD] overflow-hidden">
+    <div class="absolute bottom-0 left-0 w-[50%] h-[50%] bg-blue-50/50 blur-[120px] rounded-full -z-0"></div>
+
+    <div class="container mx-auto px-6 max-w-3xl relative z-10">
+
+        <div class="text-center mb-24 group">
+            <div class="inline-flex items-center gap-3 mb-6">
+                <span class="w-1 h-1 bg-blue-600 rounded-full animate-pulse"></span>
+                <h2 class="text-blue-600 text-[11px] font-black tracking-[0.4em] uppercase">Support</h2>
+            </div>
+            <p class="text-4xl font-black text-slate-900 tracking-tight">よくある質問</p>
+            <div
+                class="w-12 h-1 bg-gradient-to-r from-blue-600 to-cyan-400 mx-auto mt-8 rounded-full shadow-sm shadow-blue-200">
+            </div>
+        </div>
+
+        <div class="space-y-4">
+
+            <div
+                class="group bg-white rounded-3xl border border-slate-100 hover:border-blue-200 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)] transition-all duration-500 overflow-hidden">
+                <details class="group">
+                    <summary class="flex justify-between items-center cursor-pointer list-none p-8 select-none">
+                        <span
+                            class="text-lg font-bold text-slate-800 pr-8 group-hover:text-blue-600 transition-colors tracking-tight">
+                            アプリの登録は無料ですか？
+                        </span>
+                        <div
+                            class="flex-shrink-0 w-8 h-8 bg-slate-50 rounded-full flex items-center justify-center group-open:bg-blue-600 group-open:rotate-180 transition-all duration-500">
+                            <svg class="w-2.5 h-2.5 text-slate-400 group-open:text-white transition-colors" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </summary>
+                    <div class="px-8 pb-8 animate-fade-in">
+                        <div class="pt-2 border-t border-slate-50">
+                            <p class="text-slate-500 leading-relaxed text-base font-medium">
+                                IPPAYアプリへのご登録は無料です。ただし、IPPAYアプリをご利用の際に通信量に応じたパケット通信料金が発生いたしますのでご注意ください。
+                            </p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div
+                class="group bg-white rounded-3xl border border-slate-100 hover:border-blue-200 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)] transition-all duration-500 overflow-hidden">
+                <details class="group">
+                    <summary class="flex justify-between items-center cursor-pointer list-none p-8 select-none">
+                        <span
+                            class="text-lg font-bold text-slate-800 pr-8 group-hover:text-blue-600 transition-colors tracking-tight">
+                            利用に年齢制限はありますか？
+                        </span>
+                        <div
+                            class="flex-shrink-0 w-8 h-8 bg-slate-50 rounded-full flex items-center justify-center group-open:bg-blue-600 group-open:rotate-180 transition-all duration-500">
+                            <svg class="w-2.5 h-2.5 text-slate-400 group-open:text-white transition-colors" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </summary>
+                    <div class="px-8 pb-8 animate-fade-in">
+                        <div class="pt-2 border-t border-slate-50">
+                            <p class="text-slate-500 leading-relaxed text-base font-medium">
+                                利用者が未成年である場合、利用者は法定代理人の同意を得た上で残高を利用するものとします。
+                            </p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div
+                class="group bg-white rounded-3xl border border-slate-100 hover:border-blue-200 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)] transition-all duration-500 overflow-hidden">
+                <details class="group">
+                    <summary class="flex justify-between items-center cursor-pointer list-none p-8 select-none">
+                        <span
+                            class="text-lg font-bold text-slate-800 pr-8 group-hover:text-blue-600 transition-colors tracking-tight">
+                            残高とは何ですか？
+                        </span>
+                        <div
+                            class="flex-shrink-0 w-8 h-8 bg-slate-50 rounded-full flex items-center justify-center group-open:bg-blue-600 group-open:rotate-180 transition-all duration-500">
+                            <svg class="w-2.5 h-2.5 text-slate-400 group-open:text-white transition-colors" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </summary>
+                    <div class="px-8 pb-8 animate-fade-in">
+                        <div class="pt-2 border-t border-slate-50">
+                            <p class="text-slate-500 leading-relaxed text-base font-medium">
+                                1円単位でお買い物にご利用いただける電子マネーです。IPPAY加盟店の店舗でのお買い物や、提携オンラインショッピングでもシームレスにご利用いただけます。
+                            </p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div
+                class="group bg-white rounded-3xl border border-slate-100 hover:border-blue-200 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)] transition-all duration-500 overflow-hidden">
+                <details class="group">
+                    <summary class="flex justify-between items-center cursor-pointer list-none p-8 select-none">
+                        <span
+                            class="text-lg font-bold text-slate-800 pr-8 group-hover:text-blue-600 transition-colors tracking-tight">
+                            ログインできなくなりました
+                        </span>
+                        <div
+                            class="flex-shrink-0 w-8 h-8 bg-slate-50 rounded-full flex items-center justify-center group-open:bg-blue-600 group-open:rotate-180 transition-all duration-500">
+                            <svg class="w-2.5 h-2.5 text-slate-400 group-open:text-white transition-colors" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </summary>
+                    <div class="px-8 pb-8 animate-fade-in">
+                        <div class="pt-2 border-t border-slate-50">
+                            <p class="text-slate-500 leading-relaxed text-base font-medium">
+                                パスワードを忘れたなどでログインできない場合は、アプリログイン画面の「パスワードをお忘れの方」より再設定が可能です。登録したメールアドレス宛に設定用URLをお送りいたします。
+                            </p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+        </div>
+
+        <div class="mt-24 text-center">
+            <p class="text-slate-400 text-[11px] mb-8 tracking-[0.3em] font-bold uppercase">Still need help?</p>
+            <a href="#"
+                class="relative inline-flex items-center gap-3 py-5 px-12 bg-slate-900 text-white rounded-full text-[11px] font-black tracking-[0.2em] uppercase overflow-hidden group/btn transition-all hover:bg-blue-600 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-200">
+                <span class="relative z-10">Contact Support</span>
+                <i
+                    class="fas fa-paper-plane relative z-10 text-[10px] group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<footer class="bg-white border-t border-slate-50 pt-32 pb-16 relative overflow-hidden">
+    <div
+        class="absolute -bottom-10 -right-10 text-[15rem] font-black text-slate-50/50 select-none pointer-events-none tracking-tighter">
+        IPPAY
+    </div>
+
+    <div class="container mx-auto px-6 max-w-6xl relative z-10">
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-x-12 gap-y-20 mb-32">
+
+            <div class="col-span-1 md:col-span-1 group">
+                <div class="flex items-center gap-3 mb-10">
+                    <div
+                        class="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center rotate-3 group-hover:rotate-[15deg] group-hover:bg-blue-600 transition-all duration-500 shadow-lg shadow-slate-200 group-hover:shadow-blue-500/20">
+                        <span class="text-white font-black text-sm italic">IP</span>
+                    </div>
+                    <span class="text-2xl font-black tracking-tighter text-slate-900 uppercase">IP<span
+                            class="text-blue-600">pay</span></span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-loose tracking-[0.2em] font-bold uppercase mb-10">
+                    Reliable Digital Bridge.<br>
+                    <span class="text-slate-300">Connecting Trust since 2026.</span>
+                </p>
+                <div class="flex gap-6">
+                    <a href="#"
+                        class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-100 text-slate-400 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-all duration-300"><i
+                            class="fab fa-x-twitter text-sm"></i></a>
+                    <a href="#"
+                        class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-100 text-slate-400 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-all duration-300"><i
+                            class="fab fa-instagram text-sm"></i></a>
+                    <a href="#"
+                        class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-100 text-slate-400 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-all duration-300"><i
+                            class="fab fa-note-sticky text-sm"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4
+                    class="text-[11px] font-black text-slate-900 tracking-[0.4em] uppercase mb-10 flex items-center gap-3">
+                    <span class="w-4 h-px bg-blue-600"></span>
+                    Service
+                </h4>
+                <ul class="space-y-5">
+                    <li><a href="#"
+                            class="text-slate-500 text-[12px] font-medium hover:text-blue-600 hover:translate-x-1 inline-block transition-all duration-300">IPPAYについて</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-slate-500 text-[12px] font-medium hover:text-blue-600 hover:translate-x-1 inline-block transition-all duration-300">使えるお店を探す</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-slate-500 text-[12px] font-medium hover:text-blue-600 hover:translate-x-1 inline-block transition-all duration-300">加盟店のお申し込み</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-slate-500 text-[12px] font-medium hover:text-blue-600 hover:translate-x-1 inline-block transition-all duration-300">キャンペーン一覧</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4
+                    class="text-[11px] font-black text-slate-900 tracking-[0.4em] uppercase mb-10 flex items-center gap-3">
+                    <span class="w-4 h-px bg-blue-600"></span>
+                    Support
+                </h4>
+                <ul class="space-y-5">
+                    <li><a href="#"
+                            class="text-slate-500 text-[12px] font-medium hover:text-blue-600 hover:translate-x-1 inline-block transition-all duration-300">ヘルプセンター</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-slate-500 text-[12px] font-medium hover:text-blue-600 hover:translate-x-1 inline-block transition-all duration-300">お問い合わせ</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-slate-500 text-[12px] font-medium hover:text-blue-600 hover:translate-x-1 inline-block transition-all duration-300">セキュリティへの取り組み</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-slate-500 text-[12px] font-medium hover:text-blue-600 hover:translate-x-1 inline-block transition-all duration-300">公式ブログ</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4
+                    class="text-[11px] font-black text-slate-900 tracking-[0.4em] uppercase mb-10 flex items-center gap-3">
+                    <span class="w-4 h-px bg-blue-600"></span>
+                    Legal
+                </h4>
+                <ul class="space-y-5">
+                    <li><a href="#"
+                            class="text-slate-500 text-[12px] font-medium hover:text-blue-600 hover:translate-x-1 inline-block transition-all duration-300">利用規約</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-slate-500 text-[12px] font-medium hover:text-blue-600 hover:translate-x-1 inline-block transition-all duration-300">プライバシーポリシー</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-slate-500 text-[12px] font-medium hover:text-blue-600 hover:translate-x-1 inline-block transition-all duration-300">特定商取引法に基づく表記</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-slate-500 text-[12px] font-medium hover:text-blue-600 hover:translate-x-1 inline-block transition-all duration-300">資金決済法に基づく表示</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-center border-t border-slate-100 pt-16 gap-8">
+            <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                <p class="text-[10px] text-slate-400 tracking-[0.2em] font-bold">
+                    © 2026 IPPAY INC. ALL RIGHTS RESERVED.
+                </p>
+                <div class="flex items-center gap-6 text-[9px] font-black tracking-[0.2em] text-slate-300 uppercase">
+                    <span class="hover:text-slate-500 transition-colors cursor-default">Designed with Sincerity</span>
+                    <span class="w-1 h-1 bg-slate-200 rounded-full"></span>
+                    <span class="hover:text-slate-500 transition-colors cursor-default">Authorized Agency</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></div>
+                <span class="text-[10px] font-black text-slate-900 tracking-widest uppercase">System Operational</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<script src="/home.js"></script>
+</body>
+
+</html>
