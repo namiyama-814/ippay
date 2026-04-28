@@ -40,7 +40,7 @@
 | ---- || ---- || ---- || ---- |
 | /api/payments | POST | 決済を行う | { merchant_id, amount } |
 | /api/charges | POST | チャージを行う | { amount } |
-| /api/history | POST | 履歴を見る | なし |
+| /api/history | GET | 履歴を見る | なし |
 #### 加盟店が利用するAPI
 | パス | メソッド | 処理内容 | 送信するデータ |
 | ---- || ---- || ---- || ---- |

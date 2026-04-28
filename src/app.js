@@ -9,6 +9,7 @@ const { trimTrailingSlash } = require('hono/trailing-slash');
 const { serveStatic } = require('@hono/node-server/serve-static');
 
 const indexRouter = require('./routes/index');
+const apiRouter = require('./routes/api');
 
 const app = new Hono();
 
@@ -19,6 +20,7 @@ app.use(serveStatic({ root: './public' }));
 
 // ルーティング
 app.route('/', indexRouter);
+app.route('/api', apiRouter);
 
 // 404 Not Found
 app.notFound((c) => {
